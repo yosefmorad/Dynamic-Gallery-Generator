@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #container{
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+        }
+    </style>
+    
+
+    <input id="userinput" type="number">
+    <button id="but">create squer</button>
+    <div id="container"></div>
+    <script>
+const butt = document.getElementById("but")
+
+
+        const inputnum = document.getElementById("userinput")
+    
+        
+        const perns =document.getElementById("container")
+    // perns.removeChild()
+    function myfunc(num){
+        
+        for (let i =0; i<= num ;i++){
+            const newDiv = document.createElement("div")
+              const newContent = document.createTextNode(i);
+            newDiv.appendChild(newContent)
+           newDiv.style.width = "30px"
+          newDiv.style.height = "30px"
+           newDiv.style.background = "red"
+
+            
+         perns.appendChild(newDiv)
+                  
+
+            }
+
+    }
+    
+            butt.addEventListener("click" ,()=>{
+                console.log(inputnum.value);
+                
+                myfunc(inputnum.value)
+              
+               
+            
+        })
+
+
+
+
+
+        
+        
+
+
+
+
+    </script>
+</body>
+</html>
